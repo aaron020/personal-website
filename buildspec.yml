@@ -18,3 +18,8 @@ artifacts:
   # include all files required to run the application
   files:
     - '**/*'
+  base-directory: build
+
+cache:
+  paths:
+    - node_modules/
