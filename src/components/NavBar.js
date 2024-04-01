@@ -20,6 +20,10 @@ export const NavBar = () => {
     return () => window.removeEventListener("scroll", onscroll);
   },[])
 
+  const onUpdateActiveLink = (value) => {
+    setActiveLink(value);
+  }
+
   return (
       <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
       <Container>
@@ -29,9 +33,13 @@ export const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}>Home</Nav.Link>
-            <Nav.Link href="#experience" className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'}>Experience</Nav.Link>
-            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}>Projects</Nav.Link>
+            <Nav.Link href="#home" 
+            className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
+            onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+            <Nav.Link href="#experience" className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'}
+            onClick={() => onUpdateActiveLink('experience')}>Experience</Nav.Link>
+            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
+            onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
