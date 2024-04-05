@@ -1,12 +1,18 @@
 .skill {
     padding: 0 0 50px 0;
     position: relative;
+    opacity: 75%;
+    transition: opacity 0.5s;
+  }
+
+  .skill:hover{
+    opacity: 100%;
   }
   .skill-bx {
-    background: #151515;
+    background: #121212;
     border-radius: 64px;
     text-align: center;
-    padding: 60px 50px;
+    padding: 40px 50px;
     margin-top: -60px;
   }
   .skill h2 {
@@ -21,7 +27,7 @@
       margin: 14px 0 75px 0;
   }
   .skill-slider {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
   }
