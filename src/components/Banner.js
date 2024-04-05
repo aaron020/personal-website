@@ -10,7 +10,7 @@ export const Banner = () => {
     const toRotate = ["cloud technology", "backend technology", "software engineering"]
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(50)
-    const period = 5000;
+    const period = 10000;
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -36,7 +36,7 @@ export const Banner = () => {
         }else if(isDeleting && updatedText === ''){
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
-            setDelta(100);
+            setDelta(250);
         }
     }
 
@@ -47,7 +47,7 @@ export const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <h1>{`Aaron Meade: curious about `}<span className="wrap">{text}</span></h1>
                         <p>With a first-class honors degree in Computer Systems from the University of Limerick, I bring a solid foundation in technology to the table. Passionate about coding and the art of crafting innovative solutions. Presently, I am engaged in harnessing the power of backend cloud-hosted technologies in the financial services industry, contributing actively to impactful projects that drive efficiency and innovation.</p>
-                        <Button variant="outline-light" onClick={() => console.log('contact')}>Contact me</Button>
+                        <button><span>Contact Me</span></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header Image"></img>
