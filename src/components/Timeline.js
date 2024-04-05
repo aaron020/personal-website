@@ -1,5 +1,5 @@
 import { Container,Row } from "react-bootstrap"
-
+import '../style/Timeline.css'
 
 export const Timeline = () => {
     return(
