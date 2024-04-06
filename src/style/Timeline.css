@@ -30,6 +30,8 @@
     background-color: inherit;
     width: 50%;
   }
+
+
   
   /* The circles on the timeline */
   .timeline-container::after {
