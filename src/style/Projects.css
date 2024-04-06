@@ -1,0 +1,14 @@
+.projects {
+    background: linear-gradient(0deg, #5228dc -1%, #832198  100%);
+    padding: 100px 0 100px 0;
+}
+
+.card {
+    width: 20rem;
+    background-color: #121212;
+    border: 0px solid #ffffff;
+    color: white;
+    margin: auto;
+    padding: 10px;
+    margin-top: 25px;
+}
