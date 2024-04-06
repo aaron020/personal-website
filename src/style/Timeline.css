@@ -29,13 +29,9 @@
     position: relative;
     background-color: inherit;
     width: 50%;
-    opacity: 80%;
-    transition: opacity 0.5s;
   }
 
-  .timeline-container:hover{
-    opacity: 100%;
-  }
+
   
   /* The circles on the timeline */
   .timeline-container::after {

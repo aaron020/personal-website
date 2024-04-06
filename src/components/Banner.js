@@ -49,7 +49,7 @@ export const Banner = () => {
                         <h1>{`Aaron Meade: curious about `}<span className="wrap">{text}</span><span className="cursor">|</span></h1>
                         </div>
                         <p>With a first-class honors degree in Computer Systems from the University of Limerick, I bring a solid foundation in technology to the table. Passionate about coding and the art of crafting innovative solutions. Presently, I am engaged in harnessing the power of backend cloud-hosted technologies in the financial services industry, contributing actively to impactful projects that drive efficiency and innovation.</p>
-                        <button><span>Contact Me</span></button>
+                        <a className="button" href="#contact"><span>Contact Me</span></a>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header Image"></img>
