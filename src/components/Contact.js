@@ -9,17 +9,28 @@ export const Contact = () => {
         firstName: '',
         lastName: '',
         email: '',
-        message: ''
+        body: ''
     }
 
     const [formDetails, setFromDetails] = useState(formInitDetials);
     const [buttonText, setButtonText] = useState('Send');
-    const [status, setStatus] = useState({});
 
     const onFormUpdate = (category, value) => {
         setFromDetails({
             ...formDetails,
             [category]: value
+        })
+    }
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        console.log(formDetails);
+
+        fetch('https://izca7jr95a.execute-api.eu-west-1.amazonaws.com/api2/email', {
+            method: 'POST',
+            headers: {"content-type": "application/json", "x-amz-docs-region": "eu-west-1"},
+            mode: 'cors',
+            body: JSON.stringify(formDetails)
         })
     }
 
@@ -45,8 +56,8 @@ export const Contact = () => {
                                 <input type="text" value={formDetails.email} placeholder="Email" onChange={(e) => onFormUpdate('email',e.target.value)}/>
                                 </Col>
                                 <Col sm={12} className="px-1">
-                                    <textarea rows={8} value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message',e.target.value)}/>
-                                    <button type="submit"><span>{buttonText}</span></button>
+                                    <textarea rows={8} value={formDetails.body} placeholder="Message" onChange={(e) => onFormUpdate('body',e.target.value)}/>
+                                    <button onClick={sendEmail}><span>{buttonText}</span></button>
                                 </Col>
                             </Row>
                         </form>
